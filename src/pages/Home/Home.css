@@ -1,0 +1,1094 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif !important;
+}
+
+body {
+    background: #F7F6F2 !important;
+}
+
+header {
+    width: 100%;
+    height: 75px;
+    background-color: #fff;
+}
+
+header .containerMain {
+    width: 100%;
+    padding: 0px 40px;
+}
+
+header .parent {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .parent .center {
+    display: flex;
+    gap: 30px;
+    margin-left: -225px;
+}
+
+header .parent .left {
+    padding-top: 20px;
+}
+
+header .parent .center .text_link {
+    color: rgba(0, 0, 0, 0.60);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration: none;
+}
+
+header .parent .center .text_link:hover {
+    color: #249F03;
+}
+
+header .parent .right {
+    display: flex;
+    gap: 30px;
+    position: relative;
+}
+
+header .parent .right .headerBtn {
+    border-radius: 35px;
+    background: #F0AC09;
+    width: max-content;
+    padding: 10px 20px;
+    height: 41px;
+    border: none;
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 21px;
+    position: absolute;
+    right: 200px;
+    /* 116.667% */
+    top: -22px;
+}
+
+.main {
+    width: 100%;
+    height: 90vh;
+    background-image: url("../../images/mainbg.png");
+    background-size: 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+.main .parent {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main .parent .text_title {
+    color: #249F03;
+    text-align: center;
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 104px;
+    margin-bottom: 13px;
+}
+
+.main .parent .text_suptitle {
+    color: rgba(54, 39, 5, 0.57);
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-bottom: 24px;
+}
+
+.main .parent .mainBtn {
+    border-radius: 35px;
+    background: #F0AC09;
+    width: max-content;
+    padding: 10px 20px;
+    height: 41px;
+    border: none;
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+}
+
+.about {
+    width: 100%;
+    padding: 60px 0px;
+}
+
+.about .parent {
+    width: 100%;
+    display: flex;
+    gap: 85px;
+    justify-content: space-between;
+}
+
+.about .parent .right {
+    padding-top: 10px;
+}
+
+.about .parent .right .text_one {
+    color: #666;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    margin-bottom: -25px;
+}
+
+.about .parent .right .text_two {
+    color: #249F03;
+    text-align: center;
+    text-align: center;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 104px;
+    margin-bottom: 47px;
+}
+
+.about .parent .right .text_three {
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 137.109%;
+    /* 27.422px */
+    letter-spacing: 1.2px;
+    width: 610px;
+    margin-bottom: 60px;
+}
+
+.about .parent .right .aboutLink {
+    display: flex;
+    gap: 8px;
+    color: #3A414F;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 137.109%;
+    text-decoration: none;
+
+}
+
+.ourProducts {
+    width: 100%;
+    padding: 60px 0px;
+}
+
+.ourProducts .text_one {
+    color: #666;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.96px;
+    text-align: center;
+    margin-bottom: -10px;
+}
+
+.ourProducts .text_two {
+    color: #249F03;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 2.56px;
+    text-align: center;
+}
+
+.ourProducts .tabs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 45px;
+}
+
+.ourProducts .tabs .noactive {
+    border-radius: 40px;
+    border: 0.5px solid #DBDBDB;
+    background: #FFF;
+    padding: 6px 19px;
+    color: #AAAAAA;
+    transition: .3s linear;
+}
+
+.ourProducts .tabs .active {
+    border-radius: 40px;
+    border: 0.5px solid #DBDBDB;
+    background: #249F03;
+    padding: 6px 19px;
+    color: #fff;
+}
+
+.ourProducts .tabs .noactive:hover {
+    background: #249F03;
+    color: #fff;
+
+}
+
+.ourProducts .products {
+    width: 100%;
+    display: flex;
+    margin-bottom: 100px;
+}
+
+.ourProducts .products .parentCard {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+.ourProducts .products .cardParent {
+    width: 256px;
+    height: 325px;
+    background-image: url("../../images/cardbg.svg");
+    background-repeat: no-repeat;
+    padding-top: 15px;
+}
+
+.ourProducts .products .cardParent .card_text_one {
+    color: #4F4F4F;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.8px;
+    text-align: center;
+    height: 48px;
+    margin-bottom: 0;
+}
+
+.ourProducts .products .cardParent .card_text_two {
+    color: #8A8A8A;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.8px;
+    text-align: center;
+    margin-bottom: 0;
+    height: 15px;
+
+}
+
+.ourProducts .products .cardParent .imgParent {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ourProducts .products .cardParent .imgParent img {
+    width: 100%;
+    height: 180px;
+    object-fit: scale-down;
+
+}
+
+.ourProducts .products .btns {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+}
+
+.ourProducts .products .btns .moreBtn {
+    padding: 4px 8px;
+    border-radius: 28.333px;
+    background: #F0AC09;
+    border: 0px;
+    color: #FFF;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.6px;
+}
+
+.ourProducts .products .btns .orderBtn {
+    padding: 4.5px 11px;
+    border-radius: 40px;
+    border: 1px solid #F0AC09;
+    color: #F0AC09;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.6px;
+    background-color: transparent;
+}
+
+.ourProducts .categoryInfo {
+    width: 100%;
+    display: flex;
+}
+
+.ourProducts .categoryInfo .right {
+    border-radius: 50px;
+    background: #FFF;
+    width: 50%;
+    height: 684px;
+    margin-left: -40px;
+    margin-top: 60px;
+
+}
+
+.ourProducts .categoryInfo .left {
+    position: relative;
+    z-index: 2;
+}
+
+.ourProducts .categoryInfo .right .text_one {
+    color: #249F03;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.56px;
+    margin-top: 77px;
+    margin-bottom: 75px;
+    text-align: center;
+}
+
+.ourProducts .categoryInfo .right .text_two {
+    color: #000;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: left;
+    letter-spacing: 1.12px;
+    margin-left: 128px;
+    padding-right: 30px;
+}
+
+.contact {
+    width: 100%;
+    margin: 100px 0px;
+}
+
+.contact .parent {
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.contact .left {
+    width: 506px;
+    height: 517px;
+    border-radius: 45px;
+    background: #65CA6F;
+    margin-top: 92px;
+    padding: 14px 20px 0 65px;
+    position: absolute;
+    z-index: 3;
+}
+
+.contact .left .text_one {
+    color: #FFF;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    margin-bottom: 17px;
+
+}
+
+.contact .left .flex {
+    display: flex;
+    gap: 48px;
+    margin-bottom: 38px;
+}
+
+.contact .left .flex .text_two {
+    color: #FFF;
+    font-size: 23.916px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150.285%;
+    margin-bottom: 0;
+}
+
+.contact .left .flex .text_three {
+    color: #FFF;
+    font-size: 16.95px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.678px;
+    margin-bottom: 0;
+}
+
+.contact .right {
+    position: relative;
+    z-index: 2;
+    width: 80%;
+    margin-left: auto;
+    height: 720px;
+    border-radius: 44px;
+    background: #FFF;
+    box-shadow: -11px 12px 31.8px 0px rgba(0, 0, 0, 0.06);
+    display: flex;
+    justify-content: end;
+    padding: 37px 83px 81px 0;
+}
+
+.contact .right .rightParent {
+    width: 540px;
+}
+
+.rightParent .text_four {
+    color: #000;
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 2.56px;
+    margin-bottom: 0;
+}
+
+.rightParent .text_five {
+    color: #249F03;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 1px;
+    margin-bottom: 42px;
+}
+
+.rightParent .input {
+    width: 100%;
+    height: 56px;
+    border-radius: 30px;
+    border: 1px solid #D3D3D3;
+    outline: none;
+    color: #000;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.88px;
+    padding-left: 25px;
+    margin-bottom: 42px;
+}
+
+.rightParent .input::placeholder {
+    color: #D9D9D9;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.88px;
+}
+
+.react-tel-input .flag-dropdown.open .selected-flag {
+    background: transparent !important;
+    border-radius: 3px 0 0 0;
+}
+
+.react-tel-input .selected-flag:hover,
+.react-tel-input .selected-flag:focus {
+    background-color: transparent !important;
+}
+
+.rightParent .textarea {
+    width: 100%;
+    height: 148px;
+    border-radius: 30px;
+    border: 1px solid #D3D3D3;
+    outline: none;
+    color: #000;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.88px;
+    padding-left: 25px;
+    margin-bottom: 42px;
+    margin-top: 42px;
+    padding-top: 11px;
+}
+
+.rightParent .textarea::placeholder {
+    color: #D9D9D9;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.88px;
+}
+
+.formSubmit {
+    width: 200px;
+    height: 50px;
+    border-radius: 40px;
+    background: #F0AC09;
+    color: #FFF;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.88px;
+    border: 0px;
+    margin-left: auto;
+}
+
+.formm {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+footer {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+footer .parent {
+    padding-bottom: 30px;
+    border-bottom: 1px solid #aaa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+footer .parent .flex {
+    display: flex;
+    gap: 30px;
+    margin-top: 7px;
+    margin-bottom: 35px;
+}
+
+footer .parent .parent_links {
+    display: flex;
+    gap: 115px;
+
+}
+
+footer .parent .parent_links a {
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 0;
+    text-decoration: none;
+}
+
+footer .footer {
+    width: 100%;
+    height: 27px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .footer .flex_ {
+    display: flex;
+    height: 27px;
+    align-items: center;
+    gap: 1.5px;
+}
+
+footer .footer .flex_ .text_one {
+    color: #000;
+    font-size: 14.523px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 1px;
+}
+
+footer .footer .flexBack {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    text-decoration: none;
+
+    height: 27px;
+}
+
+footer .footer .flexBack .text_two {
+    color: #000;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 0;
+}
+
+footer .footer .flexBack .top {
+    width: 27px;
+    height: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.2px solid #000;
+}
+
+:where(.css-dev-only-do-not-override-apn68).ant-btn-variant-outlined,
+:where(.css-dev-only-do-not-override-apn68).ant-btn-variant-dashed {
+    display: none !important;
+}
+
+:where(.css-dev-only-do-not-override-apn68).ant-btn-variant-solid {
+    display: none !important;
+}
+
+.rgf {
+    width: 539px;
+
+    margin: 37px 56px;
+}
+
+.ant-modal {
+    width: 710px !important;
+}
+
+.ant-modal-content {
+    border-radius: 44px !important;
+}
+
+.ant-modal-close {
+    top: 20px !important;
+    inset-inline-end: 20px !important;
+}
+
+.header_mobile {
+    display: none;
+    width: 100%;
+    height: 67px;
+    background: #FFF;
+    padding: 0px 20px;
+}
+
+.header_mobile .parent {
+    width: 67%;
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_mobile .parent .navbar {
+    width: 20px;
+    height: 10px;
+    background-image: url(../../images/navbar.svg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.header_mobile img {
+    margin-left: 40px;
+    margin-top: -10px;
+}
+
+.about_mobile {
+    display: none;
+    width: 100%;
+    padding: 50px 24px;
+}
+
+.about_mobile .text_one {
+    color: #666;
+    font-size: 18.971px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.about_mobile .text_two {
+    color: #249F03;
+    text-align: center;
+    font-size: 55.333px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 82.21px;
+    text-align: center;
+    margin-bottom: 21px;
+}
+
+.about_mobile .about_img {
+    width: 324px;
+    margin-bottom: 55px;
+}
+
+.about_mobile .text_three {
+    color: #000;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 137.109%;
+    /* 23.575px */
+    letter-spacing: 1.032px;
+    margin-bottom: 42px;
+}
+
+.about_mobile .aboutLink {
+    color: #3A414F;
+    font-size: 17.39px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 137.109%;
+    text-decoration: none;
+}
+
+.about_mobile .aboutLink img {
+    margin-left: 5px;
+}
+
+.ourProducts .mobileCategory {
+    display: none;
+    padding: 50px 24px 0px 24px;
+}
+
+.ourProducts .mobileCategory .text_one {
+    color: #249F03;
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.56px;
+    margin-bottom: 24px;
+}
+
+.ourProducts .mobileCategory img {
+    width: 300px;
+    margin-bottom: 50px;
+    height: 325px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.ourProducts .mobileCategory .text_two {
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.8px;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.mobile_contact {
+    display: none;
+    width: 94%;
+    margin: 0px 12px 15px 12px;
+    border-radius: 25px;
+    background: #249F03;
+    padding: 25px 12px;
+}
+
+.mobile_contact .rightParent {
+    width: 100%;
+    background: #fff;
+    padding: 20px 22px;
+    border-radius: 16px;
+}
+
+.mobile_contact .rightParent .text_four {
+    font-size: 34px;
+    margin-bottom: 18px;
+}
+
+.mobile_contact .info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 32px;
+    margin-bottom: 6px;
+}
+
+.mobile_contact .info .div a {
+    display: block;
+    color: #FFF;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 26px;
+    text-decoration: none;
+}
+
+.mobile_contact .info .text_two {
+    color: #8FE478;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+
+.mobile_contact .text_three {
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.72px;
+    margin-bottom: 20px;
+}
+
+.mobile_contact .flex {
+    display: flex;
+    gap: 22px;
+    padding-bottom: 34px;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 10px;
+}
+
+.mobile_contact .flexx {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mobile_contact .flex_ {
+    display: flex;
+    gap: 5px;
+}
+
+.mobile_contact .text_one {
+    color: #FFF;
+    font-size: 14.523px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 0;
+}
+
+.flex_drawer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    height: 29px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.flex_drawer .text_one {
+    color: #000;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.96px;
+    margin-bottom: 0;
+}
+
+@media screen and (min-width:300px) and (max-width:800px) {
+    header {
+        display: none;
+    }
+
+    .header_mobile {
+        display: block;
+    }
+
+    .main {
+        width: 100%;
+        height: 90vh;
+        background-image: url("../../images/mobilemainbg.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+
+    .main .parent .text_title {
+        color: #249F03;
+        text-align: center;
+        font-size: 35px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 51.244px;
+        margin-bottom: 11px;
+    }
+
+    .main .parent .text_suptitle {
+        font-size: 13px;
+        margin-bottom: 18px;
+    }
+
+    .main .parent .mainBtn {
+        font-size: 15px;
+    }
+
+    .about {
+        display: none;
+    }
+
+    .about_mobile {
+        display: block;
+    }
+
+    .ourProducts .text_one {
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+
+    .ourProducts .text_two {
+        color: #249F03;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 2.56px;
+        text-align: center;
+
+    }
+
+    .ourProducts .tabs {
+        width: 100%;
+        overflow-x: scroll;
+        display: flex;
+        justify-content: left;
+        gap: 15px;
+        margin-bottom: 45px;
+    }
+
+    .ourProducts .products {
+        overflow-x: auto;
+        overflow-y: hidden;
+        height: fit-content;
+        margin-bottom: 0px;
+        width: auto;
+    }
+
+    .ourProducts .products .parentCard {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: left;
+        overflow-x: auto;
+        overflow-y: hidden;
+        height: auto;
+        max-height: 100vh;
+        gap: 40px;
+    }
+
+    .ourProducts .products .cardParent {
+        width: 210px;
+        height: 269px;
+        flex-shrink: 0;
+        min-width: 210px;
+        background-image: url("../../images/mobileproductbg.svg");
+        max-width: 210px;
+    }
+
+    .ourProducts .products .cardParent .card_text_one {
+        color: #4F4F4F;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 0.8px;
+        text-align: center;
+        height: auto;
+        margin-bottom: 0;
+
+    }
+
+    .ourProducts .products .cardParent .imgParent img {
+        width: 100%;
+        height: 150px;
+        object-fit: contain;
+    }
+
+    .ourProducts .products .cardParent .imgParent {
+        width: 100%;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .ourProducts .categoryInfo {
+        display: none;
+    }
+
+    .ourProducts .mobileCategory {
+        display: block;
+    }
+
+    .contact {
+        display: none;
+    }
+
+    footer {
+        display: none;
+    }
+
+    .rgf {
+        width: 100%;
+        margin: 0px;
+    }
+
+    .rightParent .text_four {
+        font-size: 35px;
+    }
+
+    .rightParent .text_five {
+        font-size: 15px;
+        margin-bottom: 22px;
+    }
+
+    .rightParent .input {
+        margin-bottom: 14px;
+        height: 45px;
+    }
+
+    .rightParent .textarea {
+        margin-bottom: 14px;
+        margin-top: 14px;
+        height: 110px;
+    }
+
+    .react-tel-input input {
+        height: 45px !important;
+    }
+
+    .mobile_contact {
+        display: block;
+    }
+
+    .mobile_contact .rightParent .text_five {
+        font-size: 15px;
+        display: none;
+        margin-bottom: 22px;
+    }
+
+    .formSubmit {
+        width: 100px;
+        height: 37px;
+        font-size: 12px;
+    }
+}
