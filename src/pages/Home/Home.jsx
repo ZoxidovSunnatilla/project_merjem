@@ -164,7 +164,7 @@ const productData = [
     },
     {
         category: {
-            title: { en: "Greens", ru: "зелень ", uz: "Yashillik or o‘simliklar" },
+            title: { en: "Greens", ru: "зелень ", uz: "Kokatlar" },
             image: "../../images/greens/greensImg.svg",
             subTitle: {
                 en: "Fresh, juicy greens from Uzbekistan in any season is a reality. Our climate allows us to grow various herbs all year round and to export these products without interruption. If you are interested in the supply of greenery from Uzbekistan. Having all the necessary certificates: phytosanitary, hygienic, certificate of conformity and origin (CT-1), our company has the right to export all agricultural products.",
@@ -354,10 +354,10 @@ const Home = () => {
                             <img src={logo} alt="" />
                         </div>
                         <div className="center">
-                            <a href="" className="text_link">{t('home')}</a>
-                            <a href="" className="text_link">{t('about_us')}</a>
-                            <a href="" className="text_link">{t('products')}</a>
-                            <a href="" className="text_link">{t('contact')}</a>
+                            <a href="#" className="text_link">{t('home')}</a>
+                            <a href="#about" className="text_link">{t('about_us')}</a>
+                            <a href="#products" className="text_link">{t('products')}</a>
+                            <a href="#contact" className="text_link">{t('contact')}</a>
                         </div>
                         <div className="right">
                             <button className='headerBtn' onClick={showModal}>{t("call")}</button>
@@ -474,19 +474,19 @@ const Home = () => {
                 </div>
             </div>
             <Drawer  onClose={onClose} open={open} placement="left">
-                <a href='' className="flex_drawer">
+                <a href='#' className="flex_drawer" onClick={onClose}>
                     <p className="text_one">{t("home")}</p>
                     <img src={rightIcon} alt="" />
                 </a>
-                <a href='' className="flex_drawer">
+                <a href='#about_us' className="flex_drawer" onClick={onClose}>
                     <p className="text_one">{t("about_us")}</p>
                     <img src={rightIcon} alt="" />
                 </a>
-                <a href='' className="flex_drawer">
+                <a href='#products' className="flex_drawer" onClick={onClose}>
                     <p className="text_one">{t("products")}</p>
                     <img src={rightIcon} alt="" />
                 </a>
-                <a href='' className="flex_drawer">
+                <a href='#contact_us' className="flex_drawer" onClick={onClose}>
                     <p className="text_one">{t("contact")}</p>
                     <img src={rightIcon} alt="" />
                 </a>
@@ -502,14 +502,13 @@ const Home = () => {
             </div>
             {/* main end */}
             {/* about start */}
-            <div className="about">
+            <div className="about" id='about'>
                 <div className="container">
                     <div className="parent">
                         <div className="left">
                             <img src={aboutImg} alt="" />
                         </div>
                         <div className="right">
-                            <p className="text_one">{t("know_more")}</p>
                             <p className="text_two">{t("about_us_section")}</p>
                             <p className="text_three">{t("about_us_text")}</p>
                             <a href="" className='aboutLink'>
@@ -520,8 +519,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div className="about_mobile">
-                <p className="text_one">{t("know_more")}</p>
+            <div className="about_mobile" id="about_us">
                 <p className="text_two">{t("about_us_section")}</p>
                 <img src={aboutMobile} alt="" className='about_img' />
                 <p className="text_three">{t("about_us_text")}</p>
@@ -532,9 +530,8 @@ const Home = () => {
             </div>
             {/* about end */}
             {/* our product start */}
-            <div className="ourProducts">
+            <div className="ourProducts" id='products'>
                 <div className="container">
-                    <p className="text_one">{t("stay_healthy")}</p>
                     <p className="text_two">{t("our_products")}</p>
                     <div className="tabs">
                         {productData.map((item) => (
@@ -586,7 +583,7 @@ const Home = () => {
             </div>
             {/* our product end  */}
             {/* contact start */}
-            <div className="contact">
+            <div className="contact" id='contact'>
                 <div className="container">
                     <div className="parent">
                         <div className="left">
@@ -679,14 +676,14 @@ const Home = () => {
                             <img src={footerIcon} alt="" />
                             <p className="text_one">MERJEM</p>
                         </div>
-                        <a href='/' className="flexBack">
+                        <a href='#' className="flexBack">
                             <p className="text_two">{t("back_to_top")}</p>
                             <div className="top"><img src={topIcon} alt="" /></div>
                         </a>
                     </div>
                 </div>
             </footer>
-            <div className="mobile_contact">
+            <div className="mobile_contact" id='contact_us'>
                 <div className="rightParent">
                     <p className="text_four">{t("contact_us")}</p>
                     <p className="text_five">{t("drop_a_line")}</p>
