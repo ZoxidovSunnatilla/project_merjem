@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import "./Home.css"
 import logo from "../../images/logo.svg"
 import logoMobile from "../../images/logoMobile.svg"
-
+import logoUzb from "../../images/uzbLogo.svg"
 import aboutImg from "../../images/aboutImg.svg"
 import aboutLink from "../../images/aboutIcon.svg"
 import aboutMobile from "../../images/aboutMobile.svg"
@@ -21,6 +21,8 @@ import telegram from "../../images/telegram.svg"
 import facebook from "../../images/facebook.svg"
 import instagramMobile from "../../images/instagramMobile.svg"
 import telegramMobile from "../../images/telegramMobile.svg"
+import activeCard from "../../images/productBgg.svg"
+import noactiveCard from "../../images/cardbg.svg"
 import facebookMobile from "../../images/facebookMobile.svg"
 import footerIcon from "../../images/footerIcon.svg"
 import topIcon from "../../images/topIcon.svg"
@@ -28,6 +30,9 @@ import rightIcon from "../../images/iconRight.svg"
 import Flag from 'react-world-flags';
 import styled from 'styled-components';
 import { Modal, Drawer } from 'antd';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 const productData = [
     {
         category: {
@@ -270,7 +275,13 @@ const FlagImage = styled(Flag)`
 
 const Home = () => {
     const { t, i18n } = useTranslation();
-
+    const settings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1, // 4ta bir to'plam sifatida ko'rsatadi
+        slidesToScroll: 1,
+    };
     const [selectedLanguage, setSelectedLanguage] = useState('en');
 
     const [isOpen, setIsOpen] = useState(false);
@@ -344,6 +355,20 @@ const Home = () => {
     const onClose = () => {
         setOpen(false);
     };
+    const chunkArray = (arr, size) => {
+        const result = [];
+        for (let i = 0; i < arr.length; i += size) {
+            result.push(arr.slice(i, i + size));
+        }
+        return result;
+    };
+    const chunks = chunkArray(activeTab.products, 4);
+    const [activeIndex, setActiveIndex] = useState(null);
+
+    const handleToggle = (index) => {
+        setActiveIndex(activeIndex === index ? null : index);
+      };
+    
     return (
         <div>
             {/* header start */}
@@ -351,7 +376,8 @@ const Home = () => {
                 <div className="containerMain">
                     <div className="parent">
                         <div className="left">
-                            <img src={logo} alt="" />
+                            <img src={logo} alt="" style={{ paddingTop: 20 }} />
+                            <img src={logoUzb} alt="" />
                         </div>
                         <div className="center">
                             <a href="#" className="text_link">{t('home')}</a>
@@ -473,7 +499,7 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <Drawer  onClose={onClose} open={open} placement="left">
+            <Drawer onClose={onClose} open={open} placement="left">
                 <a href='#' className="flex_drawer" onClick={onClose}>
                     <p className="text_one">{t("home")}</p>
                     <img src={rightIcon} alt="" />
@@ -545,34 +571,53 @@ const Home = () => {
                         ))}
                     </div>
                     <div className="products">
-                        <div className="parentCard">
-                            {activeTab.products.map((product) => (
-                                <div className='cardParent'>
-                                    <p className='card_text_one'>{product.name[selectedLanguage]}</p>
-                                    {product.type[selectedLanguage] ? (<p className='card_text_two'>{product?.type[selectedLanguage]}</p>) : (<p className='card_text_two'></p>)}
-                                    <div className="imgParent">
-                                        <img
-                                            src={product.images} // replace with the actual path of your raisin image
-                                            alt={product?.images}
-                                        />
-                                    </div>
-                                    <div className='btns'>
-                                        <button className='moreBtn'>{t("learn_more")}</button>
-                                        <button className='orderBtn' onClick={showModal}>{t("order")}</button>
-                                    </div>
+                        <div className="categoryInfo">
+                            <div className="left">
+                                <img src={activeTab.category.image} alt={activeTab.category.title[selectedLanguage]} />
+                            </div>
+                            <div className="right">
+                                <p className='text_one'>{activeTab.category.title[selectedLanguage]}</p>
+                                <p className='text_two'>{activeTab.category.subTitle[selectedLanguage]}</p>
+                            </div>
+                        </div>
+
+                        <Slider {...settings}>
+                            {chunks.map((item, index) => (
+                                <div className="parentCard" key={index}>
+                                    {item.map((product, index) => (
+                                        <div className='cardParent' style={{
+
+                                            backgroundImage: activeIndex === index 
+                                                ? `url(${activeCard})`
+                                                : `url(${noactiveCard})`,
+                                            height: activeIndex === index
+                                                ? "400px"
+                                                : "325px",
+                                        }}>
+                                            <p className='card_text_one'>{product.name[selectedLanguage]}</p>
+                                            {product.type[selectedLanguage] ? (<p className='card_text_two'>{product?.type[selectedLanguage]}</p>) : (<p className='card_text_two'></p>)}
+                                            <div className="imgParent">
+                                                <img
+                                                    src={product.images} // replace with the actual path of your raisin image
+                                                    alt={product?.images}
+                                                />
+                                            </div>
+                                            <div className='btns'>
+                                                <button className='moreBtn' onClick={() => handleToggle(index)}>{t("learn_more")}</button>
+                                                <button className='orderBtn' onClick={showModal}>{t("order")}</button>
+                                            </div>
+                                            {activeIndex === index && (
+                                                <p style={{  margin: "10px 10px", color: "#555" }}>
+                                                    Peanuts are rich in protein, vitamins, and minerals. They are a great snack option!
+                                                </p>
+                                            )}
+                                        </div>
+                                    ))}
                                 </div>
                             ))}
-                        </div>
+                        </Slider>
                     </div>
-                    <div className="categoryInfo">
-                        <div className="left">
-                            <img src={activeTab.category.image} alt={activeTab.category.title[selectedLanguage]} />
-                        </div>
-                        <div className="right">
-                            <p className='text_one'>{activeTab.category.title[selectedLanguage]}</p>
-                            <p className='text_two'>{activeTab.category.subTitle[selectedLanguage]}</p>
-                        </div>
-                    </div>
+
                     <div className="mobileCategory">
                         <p className='text_one'>{activeTab.category.title[selectedLanguage]}</p>
                         <img src={activeTab.category.image} alt={activeTab.category.title[selectedLanguage]} />
@@ -656,7 +701,7 @@ const Home = () => {
                             <a href="">
                                 <img src={instagram} alt="" />
                             </a>
-                            <a href="">
+                            <a href="https://t.me/merjemllc">
                                 <img src={telegram} alt="" />
                             </a>
                             <a href="">
@@ -734,7 +779,7 @@ const Home = () => {
                     <a href="">
                         <img src={instagramMobile} alt="" />
                     </a>
-                    <a href="">
+                    <a href="https://t.me/merjemllc">
                         <img src={telegramMobile} alt="" />
                     </a>
                     <a href="">
